@@ -1,5 +1,5 @@
-# SARA-CALIBRATION-RI-V2
-Joint DDE calibration and imaging for RI via non-convex optimisation applied to real RI observations
+# SARA-Calib-RI-v2
+Joint DDE calibration and imaging via non-convex optimisation applied to real RI observations
 
 The code will be available soon.
 
