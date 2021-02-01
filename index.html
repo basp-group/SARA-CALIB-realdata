@@ -15,15 +15,13 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Adaptive Preconditioned primal-dual</h1>
+        <h1>Joint DDE calibration and imaging applied to real radio interferometric data</h1>
         <p>MATLAB source code</p>
 
-        <p class="view"><a href="https://github.com/basp-group/Adaptive-PPD-for-RI">View the Project on GitHub <small>basp-group/Adaptive-PPD-for-RI</small></a></p>
+        <p class="view"><a href="https://github.com/basp-group/SARA-CALIBRATION-RI-V2">View the Project on GitHub <small>basp-group/SARA-CALIBRATION-RI-V2</small></a></p>
 
 
         <ul>
-          <li><a href="https://github.com/basp-group/Adaptive-PPD-for-RI/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/basp-group/Adaptive-PPD-for-RI/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/basp-group/Adaptive-PPD-for-RI">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
@@ -35,8 +33,7 @@
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
 
 <p> 
-New generation radio-interferometers, such as the Karl G. Jansky  Very Large Array (VLA) probe the radio sky at very high resolution and sensitivity. In this data acquisition regimes, calibration errors tend to dominate the thermal noise, resulting in the limited dynamic range of the recovered radio maps. In this context, we propose an adaptive strategy to estimate the noise and errors levels in the data.  The procedure is incorporated in the recently proposed <a href="http://basp-group.github.io/ppd-for-ri/"> Preconditioned primal-dual algorithmic structure</a>. <p>
-
+Radio interferometric (RI) data are noisy under-sampled spatial Fourier components of the unknown radio sky affected by direction-dependent antenna gains. Failure to model these antenna gains accurately results in a radio sky estimate with limited fidelity and resolution. The RI inverse problem has been recently addressed via a joint calibration and imaging approach which consists in solving a non-convex minimisation task, involving suitable priors for the DDEs, namely temporal and spatial smoothness, and $\ell_1$-sparsity for the unknown radio map, in the context of realistic RI simulations. Building on these developments, we propose to promote strong sparsity of the radio map. i.e. in $\ell_0$ sense, via a non-convex regularisation function that is the log-sum penalty. The resulting minimisation task {is addressed} via a sequence of non-convex minimisation tasks composed of re-weighted $\ell_1$ image priors, which are solved approximately. We demonstrate the efficiency of the approach on RI observations of the celebrated radio galaxy Cygnus~A obtained with the Karl G. Jansky Very Large Array at X, C, and S bands. More precisely, we showcase that the approach enhances data fidelity significantly while achieving high resolution high dynamic range radio maps, confirming the suitability of the priors considered for the unknown DDEs and radio image. As a clear qualitative indication of the high fidelity achieved by the data and the proposed approach, we report the detection of three background sources in the vicinity of Cyg~A, at S band.
 <p>The code made available here ia a MATLAB implementation of the proposed algorithm.</p>
 
 <h3>
@@ -44,8 +41,9 @@ New generation radio-interferometers, such as the Karl G. Jansky  Very Large Arr
 
 <ul>
 <li>Dr. Arwa Dabbech</li>
-<li>Dr. Alexandru Onose</li>
-<li>Mr. Abdullah Abdulaziz</li>
+<li>Dr. Audrey Repetti</li>
+<li>Dr. Rick Perley</li>
+<li>Prof. Oleg Smirnov</li>
 <li>Prof. Yves Wiaux</li>
 </ul>
 
@@ -53,7 +51,7 @@ New generation radio-interferometers, such as the Karl G. Jansky  Very Large Arr
 <a id="article" class="anchor" href="#article" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Article</h3>
 
 <p>
-   A. Dabbech, A. Onose, A. Abdulaziz, R. A. Perley, O. M. Smirnov, Y. Wiaux - <em><strong> Cygnus A super-resolved via convex optimization from VLA data </strong>, MNRAS 2018, <a href="https://doi.org/10.1093/mnras/sty372"> doi:0.1093/mnras/sty372</a></em></p>
+   A. Dabbech, A. Repetti, R. Perley, O. M. Smirnov, Y. Wiaux - <em><strong> Cygnus A jointly calibrated and imaged via non-convex optimisation from JVLA data </strong>, submitted MNRAS 2021, </em></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/basp-group">basp-group</a></p>
