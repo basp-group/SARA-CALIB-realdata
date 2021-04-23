@@ -17,14 +17,14 @@ RunID      = 10;   % Job id
 srcName    = '3c391'; % source name
 
 % Imaging
-imPixelSize= 2.5; % cellsize in asec
+imPixelSize= 2.5; % cellsize must be in arcsec
 imDimx     = 512; % image dim 1
 imDimy     = 512; % image dim 2
 imLambda     = 2e-6 ; % image regularisation parameter
 imInitThres  = 5e-2 ; % hard threshold to be applied to the initialised image in order to keep true signal only
 
 % Calibration
-ddeSpacialDim   = 3  ; % square root of the DDEs spatial dimension: odd integer is required !!  imaging only: 0|  die: 1 | dde: 3,5,7 ..
+ddeSpacialDim   = 3  ; % square root of the DDEs spatial dimension: must be odd integer if non-zero!!  imaging only: 0|  die: 1 | dde: 3,5,7 ..
 ddeTemporalDim  = 16  ; % DDEs temporal raduction ratio
 ddeAmplitudeBounds   = 0.01 ; % radius of the l_inf ball on the die and dde components.
 
