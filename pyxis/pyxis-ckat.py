@@ -1,3 +1,4 @@
+## example to launch from command line : pyxis MS='My_MS'   SRC='3c391'   TAG='ch1' get_data
 ## Rodrigues compatibale simulation pipeline 
 ## sphesihle makhathini [sphemakh@gmail.com]
 
