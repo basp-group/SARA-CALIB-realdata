@@ -13,5 +13,5 @@ Considered data are a subset of 3c391 data from VLA tutorial https://casaguides.
 
 
 **Associated paper:**
-> A. Dabbech, A. Repetti, R. Perley, O. M. Smirnov, & Y. Wiaux, Cygnus A jointly calibrated and imaged via non-convex optimisation from JVLA data</a>, <i>Monthly Notices of the Royal Astronomical Society </i>, Jan. 2021 (Submitted).
+> A. Dabbech, A. Repetti, R. Perley, O. M. Smirnov, & Y. Wiaux, Cygnus A jointly calibrated and imaged via non-convex optimisation from JVLA data</a>, <i>Monthly Notices of the Royal Astronomical Society </i>, Jan. 2021 (Submitted),  arXiv:2102.00065.
 # <a href="https://arxiv.org/abs/1701.03689">
