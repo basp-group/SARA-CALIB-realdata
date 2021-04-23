@@ -7,7 +7,7 @@ A python script from pyxis library is used to build these .mat files from  a giv
 
 *The source code relies on an external library for NUFFT (Fessler et al. 2003).
 
-*A toy example can be launched by running main_example.m. 
+*A toy example can be launched by running **main_example.m. 
 Considered data are a subset of  3c391 data from VLA tutorial https://casaguides.nrao.edu/index.php/VLA_Continuum_Tutorial_3C391-CASA4.6
 
 
