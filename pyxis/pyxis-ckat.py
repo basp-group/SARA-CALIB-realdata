@@ -29,11 +29,11 @@ FWHM = math.sqrt( math.log(256) )
 LightSpeed = 299792458
 
 
-def get_data(msf='$MS',out='$OUTPUT',src='$SRC'):
+def get_data(msfile='$MS',src_name='$SRC',out_data_set_tag='$TAG'):
 
-    dataSetFolder = II('%s'%out)
-    msname = II('%s'%msf)
-    srcFolder = II('%s'%src)
+    dataSetFolder = II('%s'%out_data_set_tag)
+    msname = II('%s'%msfile)
+    srcFolder = II('%s'%src_name)
     x.sh("mkdir -p  ./%s"%srcFolder)
     x.sh("mkdir -p  ./%s/%s"%(srcFolder,dataSetFolder))
 
