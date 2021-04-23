@@ -24,7 +24,7 @@ imLambda     = 2e-6 ; % image regularisation parameter
 imInitThres  = 5e-2 ; % hard threshold to be applied to the initialised image in order to keep true signal only
 
 % Calibration
-ddeSpacialDim   = 3  ; % square root of the DDEs spatial dimension: odd integer is required !! 0: imaging only| 1: die | dde: 3,5,7 ..
+ddeSpacialDim   = 3  ; % square root of the DDEs spatial dimension: odd integer is required !!  imaging only: 0|  die: 1 | dde: 3,5,7 ..
 ddeTemporalDim  = 16  ; % DDEs temporal raduction ratio
 ddeAmplitudeBounds   = 0.01 ; % radius of the l_inf ball on the die and dde components.
 
