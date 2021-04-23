@@ -269,10 +269,18 @@ clear PreCalib data  temporal* tmp uv* time* nFacets  InAntAll  dir* ;
 clear param_dict  uniqueAntennas flag*  ms_specific_param  *OP;
 
 %% path files
-param_imaging.path=[DirResults,filesep,'S',num2str(ddeSpacialDim),'_ID',num2str(RunID),...
+if param_algo.flag_calib
+    param_imaging.path=[DirResults,'/Calim_S',num2str(ddeSpacialDim),'_ID',num2str(RunID),...
     '_temporalRatio',num2str(ddeTemporalRatio),...
     '_regL1',num2str(imLambda),...
-    '_thres',num2str(param_imaging.thres(1)),filesep];
+    '_thres',num2str(param_imaging.thres(1)),'/'];
+else
+    param_imaging.path=[DirResults,'/Imaging_ID',num2str(RunID),...
+    '_regL1',num2str(imLambda),...
+    '_thres',num2str(param_imaging.thres(1)),'/'];
+    
+end
+
 mkdir(param_imaging.path)
 
 
