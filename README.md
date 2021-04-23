@@ -9,7 +9,7 @@ Considered data are a subset of 3c391 data from VLA tutorial https://casaguides.
 
 **External lib requirement:**
 1. Non-Uniform FFT (Fessler et al. 2003): The needed files are included in the source code (*./lib/lib_external/*). The full toolbox can be found at http://web.eecs.umich.edu/~fessler/irt/fessler.tgz.
-2. Pyxis library can be used to generate the *.mat* files of data and observations specs. The library can be found at https://github.com/ska-sa/pyxis. The script used to generate the *.mat* files are in *./pyxis/* .
+2. Pyxis library can be used to generate the *.mat* files of data and observations specs. The library can be found at https://github.com/ska-sa/pyxis. The script used to generate the *.mat* files is in *./pyxis/* .
 
 
 **Associated paper:**
