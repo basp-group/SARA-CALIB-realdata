@@ -38,7 +38,7 @@ param.nFacetsPerDim = [2 2]; % optional: num of facets in the image along each d
 %total number of facets should <= number of matlab workers
 %
 param.ms_scrFieldId = 2; %optional : field id of the source: default 0
-param.ms_freqId =1;      %optional: observation freq ID (if wideband data):default 1
+param.ms_freqId =1;      %optional: observation freq ID (if data extracted from wideband MS ):default 1
 %
 param.flag_calibration =1; %optional: default 1
 param.flag_reweighting =1;  %optional: default 1
