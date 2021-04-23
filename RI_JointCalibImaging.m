@@ -270,6 +270,14 @@ nameSaveResults=[param_imaging.path,'results_JointCalim_ID',num2str(RunID),...
     '_ddetau',num2str(ddeTemporalRatio),...
     '_ddeAmp', num2str(ddeAmplitudeBounds),...
     '_imReg',num2str(imLambda),'.mat'];
+
+nameSaveFits=[param_imaging.path,'JointCalim_ID',num2str(RunID),...
+    '_ddeS',num2str(ddeSpacialDim),...
+    '_ddetau',num2str(ddeTemporalRatio),...
+    '_ddeAmp', num2str(ddeAmplitudeBounds),...
+    '_imReg',num2str(imLambda)];
+
+
 if param_algo.flag_calib
     fprintf( '\nJoint Calibration & Imaging starting .. ');
 else
@@ -280,6 +288,8 @@ RESULTS = solver_JointCalibImaging_BCFB(param_imaging, calib_param_dde, param_al
 clear calib_param_dde calib_param_data;
 %% save results
 fprintf('\nSaving final results ..');
+fitswrite(RESULTS.MODEL,[nameSaveFits,'_MODEL.fits']);
+fitswrite(RESULTS.ResidualIm,[nameSaveFits,'_RESIDUAL.fits']);
 disp(nameSaveResults)
 save(nameSaveResults,'RESULTS', 'param_algo' ,'-v7.3')
 
