@@ -2,7 +2,7 @@
 Joint DDE calibration and imaging via non-convex optimisation applied to real RI observations.
 To launch Joint calibration and imaging, an initial estimate of the model image need to be provided in *./image_init/*. Consider running imaging only beforehand. 
 
-Data and observation specs need to be saved in *.mat* files and saved in *./data*.
+Data and observation specs need to be saved in *.mat* files in *./data*.
 
 A toy example can be launched by running **main_example.m**. 
 Considered data are a subset of 3c391 data from VLA tutorial https://casaguides.nrao.edu/index.php/VLA_Continuum_Tutorial_3C391-CASA4.6 .
