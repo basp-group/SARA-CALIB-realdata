@@ -240,29 +240,11 @@ parpool(param_algo.nFacets);
 param_algo.facetPsit = @(x) facet_sdwt2(x,paramPsit);
 param_algo.facetPsi = @(x)  facet_isdwt2(x,paramPsi);
 
-% Get floor level in wavelet domain from noise map
-imFacets = param_algo.imFacets;
-Psit  = param_algo.facetPsit;
-spmd(param_algo.nFacets)
-    if labindex==1
-        for iFacet = 2 : param_algo.nFacets
-            labSend(imNoiseMap(imFacets(iFacet).XI(1):imFacets(iFacet).XI(2),...
-                imFacets(iFacet).XJ(1):imFacets(iFacet).XJ(2)),iFacet,iFacet);
-        end
-        FacetsCmpst = imNoiseMap(imFacets(1).XI(1):imFacets(1).XI(2),...
-            imFacets(1).XJ(1):imFacets(1).XJ(2));
-    elseif labindex<= param_algo.nFacets
-        FacetsCmpst =  labReceive(1,labindex);
-    end
-end
-PsitE = Psit(FacetsCmpst);
-spmd(param_algo.nFacets)
-    imReweightBounds= std(PsitE(:));
-end
+
 for iFacet =1:param_algo.nFacets
-    param_imaging.imReweightBounds{iFacet}  = imReweightBounds{iFacet};
+    param_imaging.imReweightBounds{iFacet}  = std(imNoiseMap(:)./sqrt(numel(param_dict.basis)));
 end
-clear  FacetsCmpst  PsitE imNoiseMap imFacets imReweightBounds Psit;
+clear   imNoiseMap imFacets  ;
 
 %% clear unnecessary vars
 clear PreCalib data  temporal* tmp uv* time* nFacets  InAntAll  dir* ;
