@@ -1,6 +1,6 @@
 function [MODEL,output] = imUpdateImage(DATA, MODEL,FW,BW,weightsCmpst,param)
 %% Init / prox params
-Gamma     = 1.98/ (param.MeasOpNorm); % factor 2 because of the criterion ||y-Phix || ^2 step verified paper Chouzenoux et al. 2016
+Gamma     = 1.98/ (param.MeasOpNorm); 
 Lambda    = Gamma * param.eta*0.5;
 
 imJmax  = param.imJmax;
